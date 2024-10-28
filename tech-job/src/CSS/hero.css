@@ -1,0 +1,83 @@
+.hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.left {
+    display: none;
+}
+
+
+
+img {
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+nav {
+    z-index: 1000;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.image1, .image2, .image3 {
+    display: none;
+    
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    gap: 1rem;
+    overflow: hidden;
+    background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255 , 0.8)),url('../assets/happy.jpg') center/cover fixed no-repeat;
+    width: 100%;
+}
+
+.heroBtn {
+    background-color: var(--accentColour);
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accentColour);
+}
+
+.heroBtn:hover {
+    background-color: transparent;
+    color: var(--accentColour);
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
+ 
+
+@media screen and (max-width:1500px) {
+    .image3, .image2, .image1, .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+    }
+
+    
+}
+
+
+

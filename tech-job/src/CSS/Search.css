@@ -1,0 +1,87 @@
+
+form {
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    height: 50px;
+}
+
+input {
+    width: 40vw;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--accentColour);
+}
+
+.searchBtn {
+    background-color: var(--accentColour);
+    color: white;
+    width: 6rem;
+    margin: 10px 0;
+    ;
+}
+
+.homeNav {
+    position: sticky;
+    backdrop-filter: blur(100px);
+    width: calc(100vw - 10px);
+}
+
+.results {
+    width: calc(100vw - 10px);
+} 
+
+.resultsHeader {
+    text-align: center;
+    width: 100%;
+}
+
+.suggestions {
+    background-color: rgb(194, 194, 194);
+    width: calc(40vw + 6.5rem);
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    position: absolute;
+    margin: 0 calc((100vw - (40vw + 6rem)) / 2);
+}
+
+.suggestions li {
+    padding:15px;
+}
+
+.suggestions li:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        width: 80vw;
+    }
+
+    .suggestions {
+        width: 80vw;
+        margin: 0 calc((100vw - (80vw + 6rem)) / 2);
+    }
+}
